@@ -219,8 +219,9 @@ body {
             }
 
             h6 {
-                font-size: 2rem;
-                font-weight: 300;
+                font-size: 3.5rem;
+                font-weight: 700;
+                letter-spacing: 2px;
             }
         }
     }
@@ -337,144 +338,166 @@ body {
             margin-bottom: 3rem;
         }
 
-        .portfolio-item {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 5rem;
+        .main-portfolio {
+            padding: 2rem;
+            display: grid;
+            grid-gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
-            h1 {
-                font-size: 3rem;
-                // width: 100%;
-                // height: 40px;
-                // border-radius: 10px;
-                // text-align: center;
-                // background-color: $background-color;
-                text-transform: uppercase;
-                font-weight: 300;
-                margin-bottom: 1rem;
-                margin-top: 10rem;
-            }
+            .portfolio-item {
+                position: relative;
+                padding: 2rem;
+                border-radius: .5rem;
+                background-color: #043653;
+                box-shadow: 10px 10px 30px rgba($color: #000000, $alpha: .5);
 
-            .des-dev {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-                grid-gap: 1.5rem;
-                margin-top: 2rem;
+                .main-p {
+                    .sub-p {
+                        .sub-p-header {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin: 2rem 0 2rem 0;
 
-                img {
-                    border-radius: 10px;
-                }
+                            h6 {
+                                font-size: 3rem;
+                                font-family: $other-font;
+                                cursor: pointer;
+                                font-weight: 300;
+                            }
 
-                .portfolio-description {
-                    display: flex;
-                    flex-direction: column;
-                    margin-top: 1rem;
-                    justify-content: center;
-                    align-items: center;
-
-                    h6 {
-                        font-size: 1.5rem;
-                        text-transform: uppercase;
-                        font-weight: 700;
-                        letter-spacing: 2px;
-                        margin-bottom: 1rem;
-                    }
-
-                    .cta {
-                        font-size: 1.6rem;
-                        color: #3883ff;
-                        margin-top: 1rem;
-                        transition: color 650ms;
-
-                        &:hover {
-                            color: #2f67cd;
+                            i {
+                                font-size: 2rem;
+                                font-weight: 700;
+                                cursor: pointer;
+                            }
                         }
                     }
                 }
-            }
 
-            .more-codes {
-                font-size: 4rem;
-                color: #3883ff;
-                font-weight: 300;
-                transition: color 650ms;
+                .discription {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba($color: #000000, $alpha: 0.8);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    transform: translateY(-100%);
+                    opacity: 0;
 
-                &:hover {
-                    color: #2f67cd;
+                    .disc-header {
+                        width: 80%;
+                        margin-top: 2rem;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        h6 {
+                            font-size: 3rem;
+                            font-family: $other-font;
+                            font-weight: 300;
+                        }
+
+                        i {
+                            font-size: 2rem;
+                            font-weight: 700;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .disc-list{
+                        width: 100%;
+                        height: 40rem;
+                        padding: 4rem;
+                        font-size: 1.5rem;
+                        line-height: 2rem;
+                    }
+
+                    .disc-footer{
+                        width: 100%;
+                        margin-bottom: 5rem;
+                        padding-left: 4rem;
+                        letter-spacing: 5rem;
+                        font-size: 5rem;
+                        cursor: pointer;
+                    }
                 }
             }
-        }
-    }
-
-    .contact {
-        background-color: $linear-gradient-1;
-
-        form {
-            width: 70%;
-            margin: auto;
-
-            label {
-                font-size: 1.5rem;
-            }
-
-            input,
-            textarea {
-                width: 100%;
-                padding: 1rem;
-                margin-top: 5px;
-                border: none;
-                outline-color: $background-color;
-            }
-
-            input[type="submit"] {
-                width: initial;
-                background-color: $background-color;
-                color: $linear-gradient-2;
-                padding: 1rem 2rem;
-                border-radius: 0.8rem;
-                cursor: pointer;
-                transition: background-color 650ms;
-
-                &:hover {
-                    color: $background-color;
-                    background-color: $linear-gradient-2;
-                }
-            }
-        }
-    }
-
-    .copyright {
-        width: 100%;
-        text-align: center;
-        background-color: $linear-gradient-1;
-        padding: 2rem 0;
-        position: relative;
-
-        .up {
-            position: fixed;
-            width: 5rem;
-            height: 5rem;
-            background-color: $linear-gradient-2;
-            top: 82rem;
-            right: 5rem;
-            border-radius: 100%;
-            display: flex;
-            animation: pulse 2s infinite;
-
-            i {
-                color: $background-color;
-                font-size: 2rem;
-                margin: auto;
-            }
-        }
-
-        p {
-            font-size: 1.4rem;
         }
     }
 }
+
+.contact {
+    background-color: $linear-gradient-1;
+
+    form {
+        width: 70%;
+        margin: auto;
+
+        label {
+            font-size: 1.5rem;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 1rem;
+            margin-top: 5px;
+            border: none;
+            outline-color: $background-color;
+        }
+
+        input[type="submit"] {
+            width: initial;
+            background-color: $background-color;
+            color: $linear-gradient-2;
+            padding: 1rem 2rem;
+            border-radius: 0.8rem;
+            cursor: pointer;
+            transition: background-color 650ms;
+
+            &:hover {
+                color: $background-color;
+                background-color: $linear-gradient-2;
+            }
+        }
+    }
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    background-color: $linear-gradient-1;
+    padding: 2rem 0;
+    position: relative;
+
+    .up {
+        position: fixed;
+        width: 5rem;
+        height: 5rem;
+        background-color: $linear-gradient-2;
+        top: 82rem;
+        right: 5rem;
+        border-radius: 100%;
+        display: flex;
+        animation: pulse 2s infinite;
+
+        i {
+            color: $background-color;
+            font-size: 2rem;
+            margin: auto;
+        }
+    }
+
+    p {
+        font-size: 1.4rem;
+    }
+}
+
 
 @keyframes pulse {
     0% {

@@ -240,8 +240,9 @@ body header .landing-text h1 {
 }
 
 body header .landing-text h6 {
-  font-size: 2rem;
-  font-weight: 300;
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
 body .about .container {
@@ -379,45 +380,57 @@ body .portfolio .section-heading {
   margin-bottom: 3rem;
 }
 
-body .portfolio .portfolio-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 5rem;
-}
-
-body .portfolio .portfolio-item h1 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  font-weight: 300;
-  margin-bottom: 1rem;
-  margin-top: 10rem;
-}
-
-body .portfolio .portfolio-item .des-dev {
+body .portfolio .main-portfolio {
+  padding: 2rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(40rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
   grid-gap: 1.5rem;
-  margin-top: 2rem;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-body .portfolio .portfolio-item .des-dev img {
-  border-radius: 10px;
+body .portfolio .main-portfolio .portfolio-item {
+  position: relative;
+  padding: 2rem;
+  border-radius: .5rem;
+  background-color: #043653;
+  -webkit-box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+          box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-body .portfolio .portfolio-item .des-dev .portfolio-description {
+body .portfolio .main-portfolio .portfolio-item .main-p .sub-p .sub-p-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2rem 0 2rem 0;
+}
+
+body .portfolio .main-portfolio .portfolio-item .main-p .sub-p .sub-p-header h6 {
+  font-size: 3rem;
+  font-family: "Bebas Neue", cursive;
+  cursor: pointer;
+  font-weight: 300;
+}
+
+body .portfolio .main-portfolio .portfolio-item .main-p .sub-p .sub-p-header i {
+  font-size: 2rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+body .portfolio .main-portfolio .portfolio-item .discription {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -425,62 +438,75 @@ body .portfolio .portfolio-item .des-dev .portfolio-description {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 1rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  opacity: 0;
+}
+
+body .portfolio .main-portfolio .portfolio-item .discription .disc-header {
+  width: 80%;
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-body .portfolio .portfolio-item .des-dev .portfolio-description h6 {
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 2px;
-  margin-bottom: 1rem;
-}
-
-body .portfolio .portfolio-item .des-dev .portfolio-description .cta {
-  font-size: 1.6rem;
-  color: #3883ff;
-  margin-top: 1rem;
-  -webkit-transition: color 650ms;
-  transition: color 650ms;
-}
-
-body .portfolio .portfolio-item .des-dev .portfolio-description .cta:hover {
-  color: #2f67cd;
-}
-
-body .portfolio .portfolio-item .more-codes {
-  font-size: 4rem;
-  color: #3883ff;
+body .portfolio .main-portfolio .portfolio-item .discription .disc-header h6 {
+  font-size: 3rem;
+  font-family: "Bebas Neue", cursive;
   font-weight: 300;
-  -webkit-transition: color 650ms;
-  transition: color 650ms;
 }
 
-body .portfolio .portfolio-item .more-codes:hover {
-  color: #2f67cd;
+body .portfolio .main-portfolio .portfolio-item .discription .disc-header i {
+  font-size: 2rem;
+  font-weight: 700;
+  cursor: pointer;
 }
 
-body .contact {
+body .portfolio .main-portfolio .portfolio-item .discription .disc-list {
+  width: 100%;
+  height: 40rem;
+  padding: 4rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+body .portfolio .main-portfolio .portfolio-item .discription .disc-footer {
+  width: 100%;
+  margin-bottom: 5rem;
+  padding-left: 4rem;
+  letter-spacing: 5rem;
+  font-size: 5rem;
+  cursor: pointer;
+}
+
+.contact {
   background-color: #043653;
 }
 
-body .contact form {
+.contact form {
   width: 70%;
   margin: auto;
 }
 
-body .contact form label {
+.contact form label {
   font-size: 1.5rem;
 }
 
-body .contact form input,
-body .contact form textarea {
+.contact form input,
+.contact form textarea {
   width: 100%;
   padding: 1rem;
   margin-top: 5px;
@@ -488,7 +514,7 @@ body .contact form textarea {
   outline-color: #174661;
 }
 
-body .contact form input[type="submit"] {
+.contact form input[type="submit"] {
   width: initial;
   background-color: #174661;
   color: #ffffff;
@@ -499,12 +525,12 @@ body .contact form input[type="submit"] {
   transition: background-color 650ms;
 }
 
-body .contact form input[type="submit"]:hover {
+.contact form input[type="submit"]:hover {
   color: #174661;
   background-color: #ffffff;
 }
 
-body .copyright {
+.copyright {
   width: 100%;
   text-align: center;
   background-color: #043653;
@@ -512,7 +538,7 @@ body .copyright {
   position: relative;
 }
 
-body .copyright .up {
+.copyright .up {
   position: fixed;
   width: 5rem;
   height: 5rem;
@@ -527,13 +553,13 @@ body .copyright .up {
           animation: pulse 2s infinite;
 }
 
-body .copyright .up i {
+.copyright .up i {
   color: #174661;
   font-size: 2rem;
   margin: auto;
 }
 
-body .copyright p {
+.copyright p {
   font-size: 1.4rem;
 }
 
